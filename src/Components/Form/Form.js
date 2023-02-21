@@ -20,6 +20,7 @@ class Form extends Component {
       id: Date.now(),
       ...this.state
     }
+    console.log("here", newReservation.id)
     this.props.addReservation(newReservation)
     this.clearInputs()
   }
@@ -29,35 +30,35 @@ class Form extends Component {
   render() {
     return (
       <form>
-        <input
+        <input className="inputName"
           type="text"
           placeholder="Name"
           name="name"
           value={this.state.name}
           onChange={event => this.handleChange(event)}
         />
-        <input
+        <input className="inputDate"
           type="text"
           placeholder="Date (mm/dd)"
           name="date"
           value={this.state.date}
           onChange={event => this.handleChange(event)}
         />
-        <input
+        <input className="inputTime"
           type="text"
           placeholder="Time"
           name="time"
           value={this.state.time}
           onChange={event => this.handleChange(event)}
         />
-        <input
+        <input className="inputNumber"
           type="number"
           placeholder="Number of guests"
           name="number"
           value={this.state.number}
           onChange={event => this.handleChange(event)}
         />
-        <button onClick={event => this.submitReservation(event)}>Make Reservation</button>
+        <button className="submitBtn" onClick={event => this.submitReservation(event)}>Make Reservation</button>
       </form>
     )
   }
