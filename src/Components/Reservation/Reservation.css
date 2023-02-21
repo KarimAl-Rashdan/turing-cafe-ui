@@ -1,0 +1,12 @@
+.card {
+  background-color: white;
+  border: 3px solid teal;
+  color: teal;
+  margin:20px;
+  padding: 5px;
+}
+
+button {
+  background-color: teal;
+  color: white;
+}
