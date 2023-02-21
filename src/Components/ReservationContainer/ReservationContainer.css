@@ -1,0 +1,4 @@
+.reservationContainer {
+  display: flex;
+  flex-direction: row;
+}

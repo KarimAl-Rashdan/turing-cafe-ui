@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import fetchData from "../apiCalls"
-import ReservationContainer from "../Components/ReservationContainer"
+import ReservationContainer from "../Components/ReservationContainer/ReservationContainer"
 
 class App extends Component {
   constructor() {
@@ -12,7 +12,6 @@ class App extends Component {
   }
   componentDidMount =() => {
     fetchData()
-    .then((response) => response.json())
     .then((data) => this.setState({reservations: data}))
   }
   render() {
